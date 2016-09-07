@@ -1,0 +1,54 @@
+#!/bin/csh
+
+# C-Shell Script for Reconstructing MRI Data 
+# User must provide 'header.txt', image data, kspace trajectory, and density 
+# compensation files.
+# This script calls one of two home-developed image reconstruction routines, 
+# specified when the script is called.
+
+######################################################################################################################
+################################      Set up Reconstruction parameters / files     ###################################
+######################################################################################################################
+set RECON_TYPE = $1
+set RECON_LOG = "RECON_LOG.txt"
+
+if ($RECON_TYPE == 0) then
+	set RECON_ARGS = "-f header.txt -external_data -mag -dat_files -external_dens KWEIGHT.dat"
+	set RECON = "/export/home/lhernandez/icone/RECON/current_ese23/recon24 $RECON_ARGS"
+else
+	set RECON_ARGS = "-f header.txt -combine_echoes"
+	set RECON = "/export/home/jejimenez/jorgefiles/VIPR/RECON/mri_recon/build/recon_binary $RECON_ARGS"
+endif
+
+######################################################################################################################
+##############################  Run reconstruction routine. Save output to fi#########################################
+######################################################################################################################
+
+echo $RECON  | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+$RECON  | tee -a $RECON_LOG 
+
+######################################################################################################################
+###############################  Cleanup any files that are not needed       #########################################
+######################################################################################################################
+
+echo "rm -f OG_IMAGE.dat"
+rm -f OG_IMAGE.dat
+
+echo "rm -f IMAGE*.dat"
+rm -f IMAGE*.dat
+
+echo "rm -f KSPACE*.dat"
+rm -f KSPACE*.dat
+
+echo "rm -f pcvipr_header.txt" 
+rm -f pcvipr_header.txt
+
+echo "rm -f scan_info.txt" 
+rm -f scan_info.txt
+
+echo "rm -f X*complex"
+rm -f X*complex
+
+exit(0);
