@@ -1,0 +1,109 @@
+#!/bin/csh
+###############################################################
+#           Very Simple ICECONE Reconstruction Script         #
+#                            by                               #
+#                      Larry Hernandez                        #
+#                                                             #
+#                      (March 6, 2012)                        #
+###############################################################
+# To use this script simply type:
+#
+# recon_icone <PFILE>  
+
+###############################################################
+# Set the PFILE & RECON_LOG                            	      #
+###############################################################
+set PFILE = $1
+#set RCXRES = 400 
+set RECON_LOG = "RECON_LOG.txt"
+
+if !( -e RECON_LOG ) then
+   echo RECON_LOG file initialized on `date` >>! $RECON_LOG
+endif
+
+echo ................ Start ................... >> $RECON_LOG
+echo recon_icone24_extract script successfully started on `date` >> $RECON_LOG
+echo   args: $* >> $RECON_LOG
+echo "Setting Pfile to $PFILE" | tee -a $RECON_LOG
+
+###############################################################
+# Set reconstruction arguments                    	      #
+###############################################################
+#set RECON_ARGS = "-rawon 2 -cal_filter 0 -rcxres $RCXRES -rcyres $RCXRES -rczres $RCXRES -b0_eddy_correct 1 -dat_files -export_cal"
+set RECON_ARGS = "-rawon 2 -cal_filter 0 -b0_eddy_correct 1 -dat_files -export_cal"
+#set RECON = "/export/home/lhernandez/linux/bin/recon24 -f $PFILE $RECON_ARGS"
+set RECON = "/export/home/lhernandez/icone/RECON/current_ese23/recon24 -f $PFILE $RECON_ARGS"
+echo $RECON  | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+$RECON  | tee -a $RECON_LOG 
+
+###############################################################
+# Clean up the directory containing reconstructed data files  #
+###############################################################
+
+# echo "rm -f *.sdcopen"
+#rm -f *.sdcopen
+
+echo "rm -f PULSE_DN.dat"
+rm -f PULSE_DN.dat
+
+echo "rm -f PULSE_UP.dat"
+rm -f PULSE_UP.dat
+
+echo "rm -f Cal*.dat" 
+rm -f Cal*.dat
+
+echo "rm -f IDEAL_AREA.dat" 
+rm -f IDEAL_AREA.dat
+
+echo "rm -f OG_IMAGE.dat"
+rm -f OG_IMAGE.dat
+
+echo "rm -f IMAGE*.dat"
+rm -f IMAGE*.dat 
+
+echo "rm -f KMAP*.dat"
+rm -f KMAP*.dat
+
+echo "rm -f KWEIGHT.dat"
+rm -f KWEIGHT.dat
+
+echo "rm -f KSPACE*.dat"
+rm -f KSPACE*.dat 
+
+echo "rm -f KSPC.dat" 
+rm -f KSPC.dat 
+
+echo "rm -f MAG.dat" 
+rm -f MAG.dat
+
+echo "rm -f Ideal*.dat"
+rm -f Ideal*.dat
+
+echo "rm -f CAL*.dat"
+rm -f CAL*.dat
+
+echo "rm -f *Trajectory.dat"
+rm -f *Trajectory.dat
+
+echo "rm -f Final_Trajectory.dat"
+rm -f Final_Trajectory.dat
+
+
+echo "rm -f PulsesE*.dat" 
+rm -f PulsesE*.dat
+
+echo "rm -f pcvipr_header.txt" 
+rm -f pcvipr_header.txt
+
+echo "rm -f scan_info.txt" 
+rm -f scan_info.txt
+
+echo "rm -f data_header.txt" 
+rm -f data_header.txt
+
+echo "rm -f B0_Difference.dat"
+rm -f B0_Difference.dat
+
+exit(0)

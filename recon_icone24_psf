@@ -1,0 +1,58 @@
+#!/bin/csh
+
+######################################################################################################################
+################################      Set up Reconstruction parameters / files     ###################################
+######################################################################################################################
+set RECON_TYPE = $1
+set RECON_LOG = "RECON_LOG.txt"
+
+if ($RECON_TYPE == 0) then
+	#set RECON_ARGS = "-f header.txt -external_data -mag -dat_files -rawon 3 -external_dens KWEIGHT.dat"
+	set RECON_ARGS = "-f header.txt -external_data -mag -dat_files -rawon 3 -external_dens KWEIGHT.dat -threads 1"
+	set RECON = "/export/home/lhernandez/icone/RECON/current_ese23/recon24 $RECON_ARGS"
+else
+	set RECON_ARGS = "-f header.txt"
+	set RECON = "/export/home/jejimenez/jorgefiles/VIPR/RECON/mri_recon/build/recon_binary $RECON_ARGS"
+	#set RECON = "/export/home/kmjohnso/CODE/RECON/mri_recon/build/recon_binary $RECON_ARGS"
+endif
+
+######################################################################################################################
+##############################           Run the Reconstruction              #########################################
+######################################################################################################################
+
+echo $RECON  | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+echo . | tee -a $RECON_LOG
+$RECON  | tee -a $RECON_LOG 
+
+
+######################################################################################################################
+###############################  Cleanup any files that are not needed       #########################################
+######################################################################################################################
+
+if ($RECON_TYPE == 0) then
+	# These are enabled if rawon == 3
+	echo "rm -f OG_IMAGE.dat"
+	rm -f OG_IMAGE.dat
+
+	echo "rm -f IMAGE*.dat"
+	rm -f IMAGE*.dat
+
+	#echo "rm -f KSPACE*.dat"
+	#rm -f KSPACE*.dat
+
+	echo "rm -f pcvipr_header.txt" 
+	rm -f pcvipr_header.txt
+
+	echo "rm -f scan_info.txt" 
+	rm -f scan_info.txt
+
+	echo "rm -f scale_factor.txt" 
+	rm -f scale_factor.txt
+
+endif
+
+######################################################################################################################
+######################################################################################################################
+
+exit(0);
