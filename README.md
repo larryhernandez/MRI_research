@@ -47,4 +47,4 @@ The 3D icones sampling pattern was also implemented as a Fat-Suppressed Alternat
 
          Axial             |         Sagittal	       |           Coronal
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_168.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_Sagittal_141.jpg) | ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_Coronal_219.jpg)
+![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_168.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Sagittal_141.jpg) | ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Coronal_219.jpg)
