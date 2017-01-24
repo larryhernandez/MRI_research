@@ -18,7 +18,7 @@ On a fundamental level, the icones sampling pattern is represented by a two-dime
 
 Figure 1a: 2D Depiction    |Figure 1b:  3D icones
 :-------------------------:|:-------------------------:
-![](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1a_2D_icones_petal)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1b_icones_animated_3Dsampling.gif)
+![](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1a_2D_icones_petal.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1b_icones_animated_3Dsampling.gif)
 
 
 # Anatomical Imaging
