@@ -24,25 +24,27 @@ Figure 1a: 2D icone petal  |Figure 1b: Full 3D icones
 
 
 ## Verification that the Calibration Technique Improves Image Quality
-
-         Coronal           |         Sagittal
-:-------------------------:|:-------------------------:
-![]()  |  ![]()
+As mentioned above, a calibration method was devised and employed to correct image artifacts, like blurring and signal loss, that are caused by unwanted eddy currents that arise during the scan. In this sub-section, two images are provided of a quality assurance phantom before and after the calibration method was employed to process the raw MRi image data. As you can see, this method does a great job of accurately representing edges of the phantom (green and yellow arrows), removing a grey "fog" (red arrow) that covers a large region of the image, and restoring signal loss across the entire image.
 
 
-## Brain
+              Before               |  After
+:---------------------------------:|:---------------------------------:
+![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_without_calibration.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_calibration.jpg)
+
+
+## Brain Scanning with 3D icones
 
 After the calibration method was developed, tested, and properly implemented, I scanned a brain using this novel 3D icones MRI scan. It will be noted here that the 3D icones scan was implemented as a Spoiled Gradient Recall (SPGR) acquisition, which is a description of the primary physical mechanisms that were used to create contrast between various body tissues. The SPGR mode generates tissue contrasts that are particularly useful for visualizing the various regions of the brain. Shown below are images of a human brain (from a live, consenting volunteer) that were created using the 3D icones scan in SPGR mode.
 
-Note: While you see two distinct views of the brain, only one scan was utilized. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial plane, and axial images were generated. Then, the axial data were reformatted with standard imaging software to provide a view from the Sagittal plane. Pretty cool, huh?!
+Note: While you see two distinct views of the brain, only one scan was utilized. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial plane, and a set of 400 images with an axial view were generated (for brevity only one axial image is displayed). Then, the axial data were reformatted with standard imaging software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
 
           Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
-## Knee
+## Knee Scan with 3D icones
 
-The 3D icones sampling pattern was also implemented as a Fat-Suppressed Alternating Repetition Time (FS-ATR) acquisition, which is yet another physical mechanism for generating image contrast. The FS-ATR mode does a pretty good at suppressing the MRI signal that comes from lipids (i.e. fatty tissue) within the body. These lipid signals often obscure visibility of tissues that physicians are often more interested in visualizing, like cartilage in the knee or fibroglandular tissue in the breast. The FS-ATR mode also generates bright fluid signal and intermediate cartilage signal, which lead to improved detection of cartilage defects. Shown below are three views of a healthy knee that have been acquired using a single 3D icones scan with an Axial plane scan prescription.
+The 3D icones sampling pattern was also implemented as a Fat-Suppressed Alternating Repetition Time (FS-ATR) acquisition, which is yet another physical mechanism for generating image contrast. The FS-ATR mode does a pretty good job of suppressing the MRI signal that comes from lipids (i.e. fatty tissue) within the body. In the case of knee imaging, this would be the bone marrow. These lipid signals often obscure visibility of tissues that physicians are often more interested in visualizing, like cartilage surfaces in the knee or fibroglandular tissue in the breast. The FS-ATR mode also generates bright fluid signal and intermediate cartilage signal, which lead to improved detection of cartilage defects. Shown below are three orthogonal views of a healthy knee that have been acquired using a single 3D icones scan (acquired with an Axial view).
 
 
          Axial             |         Sagittal	       |           Coronal
