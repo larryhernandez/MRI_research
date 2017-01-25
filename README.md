@@ -3,10 +3,10 @@ This repository contains MATLAB functions and scripts, as well as Linux C-shell 
 
 The MATLAB code provided here would achieve the following tasks if provided with an appropriate MRI data file:
   1. Extract raw imaging data and calibration data from MRI data files
-  2. Generate 3D coordinates for each MRI data sample (i.e. 3D k-space map)
-  3. Create a crude estimate of the density compensation coefficients needed for image reconstruction, OR create a symbolic link to a file containing previously generated density compensation coefficients
-  4. Utilize calibration data to reduce image blurring by correcting phase errors and trajectory deviations caused by eddy currents.
-  5. Generate impulse response of this particular MRI sampling pattern (useful for designing and improving the MRI data collection method)
+  2. Generate 3D coordinates for each MRI data sample (i.e. produce a 3D k-space map)
+  3. Create a crude estimate of the density compensation coefficients needed for image reconstruction, OR create a symbolic link to a file that contains previously generated density compensation coefficients
+  4. Utilize calibration data to restore signal loss and to reduce image blurring caused by eddy currents.
+  5. Generate an impulse response of this particular MRI sampling pattern (useful for designing and improving the MRI data collection method)
 
 
 # Description of the 'icones' 3D Rosette-like MRI Sampling Pattern
@@ -20,11 +20,11 @@ Figure 1a: 2D icone petal  |Figure 1b: Full 3D icones
 ![k-Space units are m^{-1}](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1a_2D_icones_petal.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Figure_1b_icones_animated_3Dsampling.gif)
 
 
-# Images obtained with 3D icones
+# The Calibration Scheme and Anatomical Images obtained with 3D icones
 
 
-## Verification that the Calibration Technique Improves Image Quality
-As mentioned above, a calibration method was devised and employed to correct image artifacts, like blurring and signal loss, that are caused by unwanted eddy currents that arise during the scan. In this sub-section, two images are provided of a quality assurance phantom before and after the calibration method was employed to process the raw MRi image data. As you can see, this method does a great job of accurately representing edges of the phantom (green and yellow arrows), removing a grey "fog" (red arrow) that covers a large region of the image, and restoring signal loss across the entire image.
+## Visual verification that the Calibration Technique Improves Image Quality
+As previously mentioned, a calibration method was devised and employed to reduce blurring and restore signal losses that are caused by unwanted eddy currents that arise during the scan. In this section, two images of a quality assurance phantom are provided to verify that this calibration method is effective. Before and after images the calibration method was employed to process the raw MRi image data. This method does a great job of correcting image artifacts. In the corrected (i.e. "After") image it is obvious that the edges of the phantom are depicted accurately (green and yellow arrows), a grey blurry "fog" (red arrow) that once covered a large region of the image has been removed, and signal loss that previously corrupted the entire image has been restored.
 
 
               Before               |  After
