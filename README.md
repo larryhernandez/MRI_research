@@ -1,4 +1,4 @@
-# Description of this Respository
+# Description of this Repository
 This repository contains MATLAB functions and scripts, as well as Linux C-shell scripts, that I developed to perform basic image processing and to facilitate image reconstruction with raw MRI data acquired by a novel, 3D Rosette-like sampling pattern (i.e. MRI scan), called icones. Implementing this novel 3D scan onto clinical MRI Scanners and developing the code presented here were part of my duties as an MRI researcher.
 
 The MATLAB code provided here would achieve the following tasks if provided with an appropriate MRI data file:
