@@ -40,7 +40,7 @@ As previously mentioned, a calibration method was devised and employed to reduce
 
 ## Brain Scanning with 3D icones
 
-It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned using this novel MRI scan. The final image are displayed below.
+It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final image are displayed below.
 
           Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
@@ -51,7 +51,7 @@ Note: While you see two distinct views of the brain, only one scan was utilized.
 
 ## Knee Scan with 3D icones
 
-The 3D icones sampling pattern was also implemented for imaging the knee. While the reconstruction process is the same as before, the physics employed for this type of tissue contrast is different that what was used for imaging the brain. Those details will be omitted here, but as you can see from the images below, it is possible to use this scan for imaging the human knee.
+The 3D icones sampling pattern was also implemented for imaging the knee. The MRI physics employed for this type of tissue contrast is different from what was used for imaging the brain. Those details will be omitted here, but essentially the software that controls the scanning process is different while the image reconstruction software remains the same. As you can see from the images below, it is possible to use the icones sampling pattern and corresponding reconstruction software for imaging the human knee.
 
 
          Axial             |         Sagittal	       |           Coronal
