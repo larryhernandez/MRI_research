@@ -49,7 +49,7 @@ Figure 1a: 2D icone petal  |Figure 1b: Full 3D icones Sampling Pattern
 
 
 ## Quality Assurance Phantom: Visual Verification that the Calibration Technique Improves Image Quality
-As previously mentioned, a calibration method was devised and employed to reduce blurring and restore signal losses that are caused by unwanted eddy currents that arise during the scan. The details of this correction scheme are omitted here; however, I have provided two images of a quality assurance phantom to demonstrate that this calibration method is effective. It is apparent from the images below that this method does a great job of correcting image artifacts. In the corrected image labeled "After" the edges of the phantom are depicted accurately (green and yellow arrows), a grey blurry "fog" (red arrow) that once covered a large region of the image has been removed, and signal loss that previously corrupted the entire image has been restored.
+As previously mentioned, a calibration method was devised and employed to reduce blurring and restore signal losses that are caused by unwanted eddy currents that arise during the scan. The details of this correction scheme are omitted here; however, I have provided two images of a quality assurance phantom to demonstrate that this calibration method is effective. It is apparent from the images below that this method does a great job of correcting image artifacts. In the corrected image labeled "After" the edges of the phantom are depicted accurately (green and yellow arrows), a grey blurry "fog" (red arrow) that once covered a large region of the image has been removed, and (white) signal has been restored across the entire image.
 
 
               Before               |  After
