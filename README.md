@@ -16,7 +16,7 @@ To reconstruct images, update ReturnStructures.m and run_iconereconfx.m:
   1. ReturnStructures.m  
     a. Create a new ‘case’ number for the new image acquisition pfile. Each imaging exam should have its own directory.  
     b. Specify the directories containing the icones gradient waveforms, rotation matrices, and density compensation file  
-    c. Specificy the directory containing the calibration data (i.e. ‘b0datapath_x’)  
+    c. Specify the directory containing the calibration data (i.e. ‘b0datapath_x’)  
     d. Specify values for any of the following binary flags. The default values are listed  
       1. reconstruction.grid_psf: 	     	0 if not generating an impulse response
       2. reconstruction.write_custom_kweight: 1 to generate a crude density compensation
