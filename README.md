@@ -66,7 +66,7 @@ It's great that the scan and reconstruction worked well on a phantom, but what a
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
 
-Note: While you see two distinct views of the brain, only one scan was utilized to collect the imaging data. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial plane, and a set of 400 images with an axial view were generated (only one axial image is displayed here). After the axial images are generated, they were opened using standard imaging software. In this case, I utilized ImageJ. These images were then reformatted with this imaging visualization software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
+Note: While you see two distinct views of the brain, only one scan was utilized to collect the imaging data. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial scan plane. From this axially acquired data a stack of 400 images with an axial view were generated (only one axial image is displayed here). After the axial images were generated, they were opened using standard image visualization software. In this case, the image visualization software that I utilized was ImageJ. These images were then reformatted with this imaging visualization software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
 
 ## Knee Scan with 3D icones
 
