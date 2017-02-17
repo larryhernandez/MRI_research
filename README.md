@@ -1,9 +1,9 @@
 # Description of this Repository
-This [repository](https://github.com/larryhernandez/MRI_research) contains MATLAB functions and scripts, as well as Linux C-shell scripts, that I developed to facilitate image reconstruction for a novel, 3D MRI scan with the name icones.
+This [repository](https://github.com/larryhernandez/MRI_research) contains MATLAB functions and scripts, as well as Linux C-shell scripts, that I developed to facilitate image reconstruction for a novel, 3D Rosette-like MRI sampling pattern called icones.
 
-The code in this repository would achieve the following tasks if an appropriate MRI data file were provided:
-  1. Extract raw imaging data and calibration data from MRI data files.
-  2. Generate 3D coordinates for each MRI data sample collected. In MRI terminology, this produces a 3D k-space map which is needed for creating images with data that have been collected with a non-Cartesian scan like icones.
+The code in this repository would achieve the following tasks if provided with appropriate raw MRI data file(s):
+  1. Extract raw imaging data and calibration data.
+  2. Generate 3D coordinates for each MRI data sample collected. In MRI terminology this is known as a 3D k-space map. These coordinates are needed for creating images with data that have been collected with a non-Cartesian sampling pattern such as icones.
   3. Create a crude estimate of the density compensation coefficients needed for image reconstruction, OR create a symbolic link to a file that contains previously generated density compensation coefficients.
   4. Utilize calibration data to restore signal loss and to reduce image blurring caused by eddy currents.
 
@@ -59,18 +59,18 @@ As previously mentioned, a calibration method was devised and employed to reduce
 
 ## Brain Scanning with 3D icones
 
-It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final image are displayed below.
+It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final images are displayed below.
 
           Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
 
-Note: While you see two distinct views of the brain, only one scan was utilized. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial plane, and a set of 400 images with an axial view were generated (for brevity only one axial image is displayed). Then, the axial data were reformatted with standard imaging software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
+Note: While you see two distinct views of the brain, only one scan was utilized to collect the imaging data. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial plane, and a set of 400 images with an axial view were generated (only one axial image is displayed here). After the axial images are generated, they were opened using standard imaging software. In this case, I utilized ImageJ. These images were then reformatted with this imaging visualization software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
 
 ## Knee Scan with 3D icones
 
-The 3D icones sampling pattern was also implemented for imaging the knee. The MRI physics employed for this type of tissue contrast is different from what was used for imaging the brain. Those details will be omitted here, but essentially the software that controls the scanning process is different while the image reconstruction software remains the same. As you can see from the images below, it is possible to use the icones sampling pattern and corresponding reconstruction software for imaging the human knee.
+The 3D icones sampling pattern was also implemented for imaging the knee. The MRI physics employed for this type of tissue contrast is different from what was used for imaging the brain. Those details will be omitted here, but essentially the software that controls the scanning process is slightly revised to account for the relevant physics. The image reconstruction software, however, remains the same. As you can see from the images below, it is possible to use the icones sampling pattern and corresponding image reconstruction software for imaging the human knee.
 
 
          Axial             |         Sagittal	       |           Coronal
