@@ -1,9 +1,11 @@
+![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
+
 # Description of this Repository
 This [repository](https://github.com/larryhernandez/MRI_research) contains MATLAB functions and scripts, as well as Linux C-shell scripts, that I developed to facilitate image reconstruction for a novel, 3D Rosette-like MRI sampling pattern called icones.
 
 The code in this repository would achieve the following tasks if provided with appropriate raw MRI data file(s):
   1. Extract raw imaging data and calibration data.
-  2. Generate 3D coordinates for each MRI data sample collected. In MRI terminology this is known as a 3D k-space map. These coordinates are needed for creating images with data that have been collected with a non-Cartesian sampling pattern such as icones.
+  2. Generate 3D coordinates for each MRI data sample collected. In MRI terminology this is known as a 3D k-space map. These coordinates are needed for creating images from data that have been collected with a non-Cartesian sampling pattern such as icones.
   3. Create a crude estimate of the density compensation coefficients needed for image reconstruction, OR create a symbolic link to a file that contains previously generated density compensation coefficients.
   4. Utilize calibration data to restore signal loss and to reduce image blurring caused by eddy currents.
 
@@ -66,7 +68,7 @@ It's great that the scan and reconstruction worked well on a phantom, but what a
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
 
-Note: While you see two distinct views of the brain, only one scan was utilized to collect the imaging data. That is the beauty of a 3D MRI scan like this one which acquires isotropic voxels. The volunteer was scanned only once using an Axial scan plane. From this axially acquired data a stack of 400 images with an axial view were generated (only one axial image is displayed here). After the axial images were generated, they were opened using standard image visualization software. In this case, the image visualization software that I utilized was ImageJ. These images were then reformatted with this imaging visualization software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
+Note: While you see two distinct views of the brain, only one scan was utilized to collect the imaging data. That is the beauty of a 3D MRI scan which acquires isotropic voxels. The volunteer was scanned only once using an axial scan plane. From this axially acquired data a stack of 400 images with an axial view were generated (only one axial image is displayed here). After the axial images were generated, they were opened using standard image visualization software. In this case, the image visualization software that I utilized was ImageJ. These images were then reformatted with this imaging visualization software to generate 400 images with a view from the Sagittal plane. Pretty cool, huh?!
 
 ## Knee Scan with 3D icones
 
