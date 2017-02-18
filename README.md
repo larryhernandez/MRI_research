@@ -1,5 +1,7 @@
+          Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
-![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
+![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  | ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
+
 
 # Description of this Repository
 This [repository](https://github.com/larryhernandez/MRI_research) contains MATLAB functions and scripts, as well as Linux C-shell scripts, that I developed to facilitate image reconstruction for a novel, 3D Rosette-like MRI sampling pattern called icones.
