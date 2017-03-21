@@ -1,3 +1,5 @@
+
+
           Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  | ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
@@ -57,14 +59,15 @@ Figure 1a: 2D icone petal  |Figure 1b: Full 3D icones Sampling Pattern
 As previously mentioned, a calibration method was devised and employed to reduce blurring and restore signal losses that are caused by unwanted eddy currents that arise during the scan. The details of this correction scheme are omitted here; however, I have provided two images of a quality assurance phantom to demonstrate that this calibration method is effective. It is apparent from the images below that this method does a great job of correcting image artifacts. In the corrected image labeled "After" the edges of the phantom are depicted accurately (green and yellow arrows), a grey blurry "fog" (red arrow) that once covered a large region of the image has been removed, and (white) signal has been restored across the entire image.
 
 
-              Before               |  After
-:---------------------------------:|:---------------------------------:
+          Before           |  After
+:-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_without_calibration.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_calibration.jpg)
 
 
 ## Brain Scanning with 3D icones
 
-It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final images are displayed below.
+It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final images are displayed below.  
+
 
           Axial            |     Sagittal Reformat
 :-------------------------:|:-------------------------:
