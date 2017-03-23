@@ -28,7 +28,7 @@ To reconstruct images, update ReturnStructures.m and run_iconereconfx.m:
       5. reconstruction.use_calgrad:          0 to disable calibration correction method  
 
   2. run_iconereconfx.m  
-    a.Specify values for the following variables:  
+    a. Specify values for the following variables:  
       1. echoes2process: 		     0 (first echo only); 1(second echo only); 2 (only the radial spokes of both echoes); 3 (both echoes)
       2. experiments_to_run: 		     integer corresponding to the case number listed in ‘ReturnStructures.m’
       3. recon_without_b0corr:             0 or 1. If 0 will reconstruct images before applying B0 correction (for debugging)
@@ -55,7 +55,7 @@ Figure 1a: 2D icone petal  |Figure 1b: Full 3D icones Sampling Pattern
 As previously mentioned, a calibration method was devised and employed to reduce blurring and restore signal losses that are caused by unwanted eddy currents that arise during the scan. The details of this correction scheme are omitted here; however, I have provided two images of a quality assurance phantom to demonstrate that this calibration method is effective. It is apparent from the images below that this method does a great job of correcting image artifacts. In the corrected image labeled "After" the edges of the phantom are depicted accurately (green and yellow arrows), a grey blurry "fog" (red arrow) that once covered a large region of the image has been removed, and (white) signal has been restored across the entire image.
 
 
-          Before           |  After
+Before                     |After
 :-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_without_calibration.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/ACR_phantom_calibration.jpg)
 
@@ -65,7 +65,7 @@ As previously mentioned, a calibration method was devised and employed to reduce
 It's great that the scan and reconstruction worked well on a phantom, but what about on an actual human being? Well, after the calibration method was developed, tested, and properly implemented, the brain of a live human was scanned. The final images are displayed below.  
 
 
-          Axial            |     Sagittal Reformat
+Axial            	   |Sagittal Reformat
 :-------------------------:|:-------------------------:
 ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
@@ -77,6 +77,6 @@ Note: While you see two distinct views of the brain, only one scan was utilized 
 The 3D icones sampling pattern was also implemented for imaging the knee. The MRI physics employed for this type of tissue contrast is different from what was used for imaging the brain. Those details will be omitted here, but essentially the software that controls the scanning process is slightly revised to account for the relevant physics. The image reconstruction software, however, remains the same. As you can see from the images below, it is possible to use the icones sampling pattern and corresponding image reconstruction software for imaging the human knee.
 
 
-         Axial             |         Sagittal	       |           Coronal
+Axial                      |Sagittal	               |Coronal
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_168.jpg)  |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Sagittal_141.jpg) | ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Coronal_219.jpg)
+![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Axial_168.jpg) |  ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Sagittal_141.jpg) | ![](https://github.com/larryhernandez/MRI_research/blob/master/Knee_FSATR_Coronal_219.jpg)
