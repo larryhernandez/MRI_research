@@ -1,8 +1,4 @@
-
-
-          Axial            |     Sagittal Reformat
-:-------------------------:|:-------------------------:
-![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Axial_150.jpg)  | ![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
+![](https://github.com/larryhernandez/MRI_research/blob/master/Brain_FSPGR_Sagittal_158.jpg)
 
 
 # Description of this Repository
